@@ -1,6 +1,6 @@
-CXX      ?= g++
-CXXFLAGS ?= -std=c++20
-CPPFLAGS ?= -fopenmp -O0 -Wall -I./include -Wno-conversion-null -Wno-deprecated-declarations 
+CXX      = mpicxx
+CXXFLAGS = -std=c++20 -fopenmp 
+CPPFLAGS = -O0 -Wall -I./include -Wno-conversion-null -Wno-deprecated-declarations 
 SOURCE_DIR=./src/ #set the location of source file
 VPATH=$(SOURCE_DIR)
 SRCS=$(join $(dir $(SOURCE_DIR)),$(notdir *.cpp)) #source files
